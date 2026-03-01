@@ -295,16 +295,18 @@ button[type="submit"]:hover { opacity: 0.85; }
 
 .socials a,
 .socials a:link,
-.socials a:visited {
+.socials a:visited,
+.socials a:active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--muted);
+  color: var(--muted) !important;
+  text-decoration: none;
   transition: color 0.2s;
 }
 
 .socials a:hover {
-  color: var(--text);
+  color: var(--text) !important;
 }
 
 .socials svg {
