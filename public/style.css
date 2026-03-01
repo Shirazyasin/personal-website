@@ -91,16 +91,26 @@ h1 {
   object-fit: cover;
 }
 
+/* ---- Page Header ---- */
+.page-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0;
+}
+
 /* ---- Back Link ---- */
 .back-link,
 .back-link:link,
 .back-link:visited {
-  display: inline-block;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--muted);
   text-decoration: none;
-  margin-bottom: 1.5rem;
+  margin-right: 1rem;
   transition: color 0.2s;
 }
 
