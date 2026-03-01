@@ -1,0 +1,144 @@
+SHIRAZ PERSONAL WEBSITE — STYLE GUIDE
+======================================
+Upload this file to Claude when building new pages (e.g. About page)
+to ensure exact style consistency.
+
+
+1. COLOR PALETTE
+----------------
+Light mode:
+  --bg:        #fafafa   (page background)
+  --text:      #1a1a1a   (primary text)
+  --muted:     #666      (secondary text, descriptions, labels)
+  --border:    #e0e0e0   (dividers, input borders)
+  --accent:    #2a2a2a   (buttons, avatar placeholder bg)
+  --card-bg:   #fff      (card backgrounds)
+  --input-bg:  #fff      (form input backgrounds)
+
+Dark mode:
+  --bg:        #111
+  --text:      #e8e8e8
+  --muted:     #999
+  --border:    #2a2a2a
+  --accent:    #e8e8e8
+  --card-bg:   #1a1a1a
+  --input-bg:  #1a1a1a
+
+Hover accent:  #78C5EF   (project name + arrow on hover)
+
+Blog thumbnail gradients (135deg):
+  1. #667eea -> #764ba2   (purple-indigo)
+  2. #f093fb -> #f5576c   (pink-coral)
+  3. #4facfe -> #00f2fe   (blue-cyan)
+  4. #43e97b -> #38f9d7   (green-mint)
+  5. #fa709a -> #fee140   (coral-yellow)
+  6. #a18cd1 -> #fbc2eb   (lavender-pink)
+
+
+2. TYPOGRAPHY
+-------------
+Font family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif
+Line height:  1.6 (body default)
+
+h1:           1.5rem, weight 600, letter-spacing -0.02em
+h2 (labels):  0.8rem, weight 600, uppercase, letter-spacing 0.08em, color var(--muted)
+Body text:    0.95rem (bio), 0.85rem (descriptions, blog titles, FAQ answers)
+Small text:   0.82rem (project desc, form labels)
+Footer:       0.78rem
+
+
+3. LAYOUT
+---------
+Max width:       560px (centered)
+Body padding:    4rem top/bottom, 1.5rem sides
+Section spacing: 3rem bottom margin
+Hero spacing:    3.5rem bottom margin
+
+Mobile (<=480px):
+  Body padding:  2.5rem top/bottom, 1.25rem sides
+  h1:            1.3rem
+  Blog grid:     single column
+
+
+4. COMPONENTS
+-------------
+Avatar:
+  96x96px, border-radius 50%, 2px solid var(--border)
+
+Section headings (h2):
+  Uppercase, muted color, small font, wide letter-spacing
+
+Project list items:
+  No borders/cards, just text rows with faint 1px dividers between
+  Arrow (-->) on right side, slides 3px right on hover
+  Name + arrow turn #78C5EF on hover, description stays muted
+
+Blog grid:
+  2-column grid, 1rem gap
+  Thumbnails: 16/10 aspect ratio, 8px border-radius, gradient backgrounds
+  Titles: 0.85rem, weight 500
+  Hover: opacity 0.7
+
+FAQ accordion:
+  Native <details>/<summary> elements
+  Custom chevron arrow via CSS ::after (8px, 2px border, rotates on open)
+  1px bottom border between items
+  Answer text: 0.85rem, muted color, line-height 1.55
+
+Contact form:
+  Inputs: 1px border, 8px border-radius, 0.65rem padding
+  Focus: border-color #aaa
+  Submit button: full width, var(--accent) bg, white text, 8px radius
+  Hover: opacity 0.85
+
+Social icons (footer):
+  18x18px inline SVGs, grey (--muted), darken to --text on hover
+  Instagram = stroke icon, X + Behance = filled icons
+  Use !important on color to override browser link defaults
+  Always include :link, :visited, :active selectors
+
+Dark mode toggle:
+  Fixed, top-left corner (1.25rem from edges)
+  36x36px circle, 1px border, var(--card-bg) background
+  Moon icon (light mode) / Sun icon (dark mode)
+  Persisted via localStorage, respects system preference on first visit
+
+
+5. TRANSITIONS
+--------------
+All transitions: 0.2s
+  - Color changes (links, hover states)
+  - Border color (inputs, toggle)
+  - Opacity (buttons, blog cards)
+  - Transform (arrow slide, FAQ chevron rotate)
+
+
+6. FILE STRUCTURE
+-----------------
+public/
+  index.html     - page markup
+  style.css      - all styles (link with ?v=N for cache busting)
+  script.js      - dark mode toggle + form handler
+  avatar.svg     - placeholder avatar
+server.js        - Express static file server
+package.json     - Node.js config
+
+
+7. SHARED ELEMENTS (reuse across pages)
+----------------------------------------
+These should be identical on every page:
+  - Dark mode toggle button (top-left)
+  - Footer with social icons (Instagram, X, Behance) + copyright
+  - Same style.css file
+  - Same script.js file (dark mode persistence)
+
+
+8. NOTES
+--------
+- Site uses CSS custom properties (variables) for all colors — dark mode
+  swaps them via [data-theme="dark"] on <html>
+- No external dependencies — pure HTML/CSS/JS
+- All link hover colors for projects use #78C5EF specifically
+- Social icon SVGs must have explicit width="18" height="18" attributes
+  in the HTML to prevent sizing bugs on some hosts
+- Always use cache-busting query string on style.css (increment ?v=N)

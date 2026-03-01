@@ -324,6 +324,30 @@ footer {
   text-align: center;
 }
 
+/* ---- Nav ---- */
+.nav {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 100;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav a,
+.nav a:link,
+.nav a:visited {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
 /* ---- Theme Toggle ---- */
 .theme-toggle {
   position: fixed;
