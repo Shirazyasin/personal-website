@@ -112,11 +112,12 @@ h2 {
   border: none;
   text-decoration: none;
   color: var(--text);
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 }
 
-.project:hover {
-  opacity: 0.7;
+.project:hover .project-name,
+.project:hover .arrow {
+  color: #78C5EF;
 }
 
 .project-info { flex: 1; }
@@ -281,6 +282,42 @@ button[type="submit"]:hover { opacity: 0.85; }
   margin-top: 0.75rem;
   color: var(--muted);
   display: none;
+}
+
+/* ---- Socials ---- */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.socials a:hover {
+  color: var(--text);
+}
+
+.socials svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.socials a:nth-child(2) svg,
+.socials a:nth-child(3) svg {
+  fill: currentColor;
+  stroke: none;
 }
 
 /* ---- Footer ---- */
