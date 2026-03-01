@@ -81,6 +81,16 @@ h1 {
   margin: 0 auto;
 }
 
+/* ---- About Photo ---- */
+.about-photo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin-bottom: 2rem;
+  object-fit: cover;
+}
+
 /* ---- Back Link ---- */
 .back-link,
 .back-link:link,
