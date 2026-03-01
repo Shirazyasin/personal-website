@@ -230,11 +230,10 @@ h2 {
 .blog-page-card {
   text-decoration: none;
   color: var(--text);
-  transition: opacity 0.2s;
 }
 
-.blog-page-card:hover {
-  opacity: 0.7;
+.blog-page-card:hover .blog-page-title {
+  color: #315beb;
 }
 
 .blog-page-thumb {
@@ -249,6 +248,7 @@ h2 {
   font-weight: 500;
   line-height: 1.35;
   margin-bottom: 0.25rem;
+  transition: color 0.2s;
 }
 
 .blog-page-desc {
