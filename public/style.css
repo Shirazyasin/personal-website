@@ -293,7 +293,9 @@ button[type="submit"]:hover { opacity: 0.85; }
   margin-bottom: 0.75rem;
 }
 
-.socials a {
+.socials a,
+.socials a:link,
+.socials a:visited {
   display: inline-flex;
   align-items: center;
   justify-content: center;
