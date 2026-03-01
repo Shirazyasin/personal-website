@@ -161,10 +161,16 @@ h2 {
 .blog-thumb {
   width: 100%;
   aspect-ratio: 16 / 10;
-  background: var(--border);
   border-radius: 8px;
   margin-bottom: 0.5rem;
 }
+
+.blog-card:nth-child(1) .blog-thumb { background: linear-gradient(135deg, #667eea, #764ba2); }
+.blog-card:nth-child(2) .blog-thumb { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.blog-card:nth-child(3) .blog-thumb { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.blog-card:nth-child(4) .blog-thumb { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.blog-card:nth-child(5) .blog-thumb { background: linear-gradient(135deg, #fa709a, #fee140); }
+.blog-card:nth-child(6) .blog-thumb { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
 
 .blog-title {
   font-size: 0.85rem;
