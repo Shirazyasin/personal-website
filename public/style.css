@@ -288,12 +288,13 @@ button[type="submit"]:hover { opacity: 0.85; }
 .socials {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 0.75rem;
 }
 
 .socials a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--muted);
@@ -305,19 +306,10 @@ button[type="submit"]:hover { opacity: 0.85; }
 }
 
 .socials svg {
+  display: block;
   width: 18px;
   height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.socials a:nth-child(2) svg,
-.socials a:nth-child(3) svg {
-  fill: currentColor;
-  stroke: none;
+  flex-shrink: 0;
 }
 
 /* ---- Footer ---- */
