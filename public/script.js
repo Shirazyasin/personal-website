@@ -44,25 +44,6 @@
   });
 })();
 
-// Image showcase scroll split
-(function() {
-  const showcase = document.querySelector('.image-showcase');
-  if (!showcase) return;
-
-  function checkSplit() {
-    const rect = showcase.getBoundingClientRect();
-    const triggerPoint = window.innerHeight * 0.45;
-    if (rect.top < triggerPoint) {
-      showcase.classList.add('split');
-    } else {
-      showcase.classList.remove('split');
-    }
-  }
-
-  window.addEventListener('scroll', checkSplit, { passive: true });
-  checkSplit();
-})();
-
 function handleSubmit(e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
