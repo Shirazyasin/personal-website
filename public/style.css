@@ -95,6 +95,7 @@ h1 {
 .page-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 
@@ -110,7 +111,6 @@ h1 {
   font-weight: 500;
   color: var(--muted);
   text-decoration: none;
-  margin-right: 1rem;
   transition: color 0.2s;
 }
 
