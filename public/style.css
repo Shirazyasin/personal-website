@@ -470,6 +470,138 @@ h2 {
   }
 }
 
+/* ---- Project Detail Page ---- */
+.project-meta {
+  display: flex;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.project-meta-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.project-meta-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-description {
+  margin-bottom: 2rem;
+}
+
+.project-description p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.project-hero {
+  margin-bottom: 1.5rem;
+}
+
+.project-hero img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.project-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.2s, filter 0.2s;
+  cursor: pointer;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+.project-gallery-placeholder {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.project-ext-link {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.project-ext-link a {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #315beb;
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid #315beb;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.project-ext-link a:hover {
+  background: #315beb;
+  color: #fff;
+}
+
+.project-next {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+.project-next-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-next-link:hover {
+  color: #315beb;
+}
+
+@media (max-width: 480px) {
+  .project-meta {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- FAQ ---- */
 .faq-list {
   display: flex;
