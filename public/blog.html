@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — Shiraz Yasin</title>
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
 
@@ -33,57 +33,8 @@
     <a href="index.html" class="back-link">&larr; Back</a>
   </div>
 
-  <div class="blog-page-grid">
-    <a class="blog-page-card" href="#">
-      <div class="blog-page-thumb" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
-      <div class="blog-page-title">Getting Started with Design Systems &rarr;</div>
-      <div class="blog-page-desc">A beginner's guide to building consistent and scalable design systems from scratch.</div>
-    </a>
-    <a class="blog-page-card" href="#">
-      <div class="blog-page-thumb" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
-      <div class="blog-page-title">Building a Minimal Personal Site &rarr;</div>
-      <div class="blog-page-desc">Why simplicity wins and how to create a personal site that actually represents you.</div>
-    </a>
-    <a class="blog-page-card" href="#">
-      <div class="blog-page-thumb" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
-      <div class="blog-page-title">Lessons Learned from Freelancing &rarr;</div>
-      <div class="blog-page-desc">Five years of freelance work taught me more than any classroom ever could.</div>
-    </a>
-    <a class="blog-page-card" href="#">
-      <div class="blog-page-thumb" style="background: linear-gradient(135deg, #43e97b, #38f9d7);"></div>
-      <div class="blog-page-title">The Case for Simple Software &rarr;</div>
-      <div class="blog-page-desc">In a world of feature bloat, there's real value in doing less — but doing it well.</div>
-    </a>
-    <a class="blog-page-card" href="#">
-      <div class="blog-page-thumb" style="background: linear-gradient(135deg, #fa709a, #fee140);"></div>
-      <div class="blog-page-title">How I Organize My Work &rarr;</div>
-      <div class="blog-page-desc">My workflow for managing projects, deadlines, and creative energy without burning out.</div>
-    </a>
-    <a class="blog-page-card" href="#">
-      <div class="blog-page-thumb" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);"></div>
-      <div class="blog-page-title">Thoughts on Developer Experience &rarr;</div>
-      <div class="blog-page-desc">Why DX matters just as much as UX and how to improve it in your projects.</div>
-    </a>
-    <a class="blog-page-card" href="#">
-      <div class="blog-page-thumb" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
-      <div class="blog-page-title">Photography as a Creative Outlet &rarr;</div>
-      <div class="blog-page-desc">How picking up a camera changed the way I approach design and storytelling.</div>
-    </a>
-    <a class="blog-page-card" href="#">
-      <div class="blog-page-thumb" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
-      <div class="blog-page-title">Working with Brands Remotely &rarr;</div>
-      <div class="blog-page-desc">Tips for building strong client relationships when you never meet face to face.</div>
-    </a>
-    <a class="blog-page-card" href="#">
-      <div class="blog-page-thumb" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
-      <div class="blog-page-title">Designing for Social Media &rarr;</div>
-      <div class="blog-page-desc">What I've learned creating scroll-stopping content for Instagram, TikTok, and beyond.</div>
-    </a>
-    <a class="blog-page-card" href="#">
-      <div class="blog-page-thumb" style="background: linear-gradient(135deg, #43e97b, #38f9d7);"></div>
-      <div class="blog-page-title">The Tools I Use Every Day &rarr;</div>
-      <div class="blog-page-desc">A look at my go-to apps, gear, and software for design, photo, and video work.</div>
-    </a>
+  <div class="blog-page-grid" id="blog-grid">
+    <!-- Cards loaded from posts.json -->
   </div>
 </main>
 
@@ -103,6 +54,44 @@
 </footer>
 
 <script src="script.js?v=5"></script>
+<script>
+(function() {
+  fetch('data/posts.json')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      var posts = data.posts || data;
+      var grid = document.getElementById('blog-grid');
+      posts.forEach(function(post) {
+        var card = document.createElement('a');
+        card.className = 'blog-page-card';
+        card.href = post.link || '#';
+
+        var thumb = document.createElement('div');
+        thumb.className = 'blog-page-thumb';
+        if (post.image) {
+          thumb.style.backgroundImage = 'url(' + post.image + ')';
+          thumb.style.backgroundSize = 'cover';
+          thumb.style.backgroundPosition = 'center';
+        } else {
+          thumb.style.background = post.gradient || 'linear-gradient(135deg, #667eea, #764ba2)';
+        }
+
+        var title = document.createElement('div');
+        title.className = 'blog-page-title';
+        title.textContent = post.title + ' \u2192';
+
+        var desc = document.createElement('div');
+        desc.className = 'blog-page-desc';
+        desc.textContent = post.description;
+
+        card.appendChild(thumb);
+        card.appendChild(title);
+        card.appendChild(desc);
+        grid.appendChild(card);
+      });
+    });
+})();
+</script>
 
 </body>
 </html>

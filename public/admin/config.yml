@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: Shirazyasin/personal-website
+  branch: main
+  base_url: https://decap-oauth.netlify.app
+
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+collections:
+  - name: "settings"
+    label: "Blog Posts"
+    files:
+      - name: "posts"
+        label: "All Posts"
+        file: "public/data/posts.json"
+        format: "json"
+        fields:
+          - name: "posts"
+            label: "Posts"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "string" }
+              - { name: "image", label: "Thumbnail Image", widget: "image", required: false, hint: "Upload a landscape image. Leave empty to use gradient." }
+              - { name: "gradient", label: "Gradient Fallback", widget: "string", required: false, default: "linear-gradient(135deg, #667eea, #764ba2)", hint: "CSS gradient used when no image is uploaded." }
+              - { name: "date", label: "Date", widget: "datetime", format: "YYYY-MM-DD" }
+              - { name: "link", label: "Link URL", widget: "string", default: "#" }

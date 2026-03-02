@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "title": "Getting Started with Design Systems",
+      "description": "A beginner's guide to building consistent and scalable design systems from scratch.",
+      "image": "",
+      "gradient": "linear-gradient(135deg, #667eea, #764ba2)",
+      "date": "2026-03-01",
+      "link": "#"
+    },
+    {
+      "title": "Building a Minimal Personal Site",
+      "description": "Why simplicity wins and how to create a personal site that actually represents you.",
+      "image": "",
+      "gradient": "linear-gradient(135deg, #f093fb, #f5576c)",
+      "date": "2026-02-20",
+      "link": "#"
+    },
+    {
+      "title": "Lessons Learned from Freelancing",
+      "description": "Five years of freelance work taught me more than any classroom ever could.",
+      "image": "",
+      "gradient": "linear-gradient(135deg, #4facfe, #00f2fe)",
+      "date": "2026-02-10",
+      "link": "#"
+    },
+    {
+      "title": "The Case for Simple Software",
+      "description": "In a world of feature bloat, there's real value in doing less — but doing it well.",
+      "image": "",
+      "gradient": "linear-gradient(135deg, #43e97b, #38f9d7)",
+      "date": "2026-01-28",
+      "link": "#"
+    },
+    {
+      "title": "How I Organize My Work",
+      "description": "My workflow for managing projects, deadlines, and creative energy without burning out.",
+      "image": "",
+      "gradient": "linear-gradient(135deg, #fa709a, #fee140)",
+      "date": "2026-01-15",
+      "link": "#"
+    },
+    {
+      "title": "Thoughts on Developer Experience",
+      "description": "Why DX matters just as much as UX and how to improve it in your projects.",
+      "image": "",
+      "gradient": "linear-gradient(135deg, #a18cd1, #fbc2eb)",
+      "date": "2026-01-05",
+      "link": "#"
+    },
+    {
+      "title": "Photography as a Creative Outlet",
+      "description": "How picking up a camera changed the way I approach design and storytelling.",
+      "image": "",
+      "gradient": "linear-gradient(135deg, #667eea, #764ba2)",
+      "date": "2025-12-20",
+      "link": "#"
+    },
+    {
+      "title": "Working with Brands Remotely",
+      "description": "Tips for building strong client relationships when you never meet face to face.",
+      "image": "",
+      "gradient": "linear-gradient(135deg, #f093fb, #f5576c)",
+      "date": "2025-12-10",
+      "link": "#"
+    },
+    {
+      "title": "Designing for Social Media",
+      "description": "What I've learned creating scroll-stopping content for Instagram, TikTok, and beyond.",
+      "image": "",
+      "gradient": "linear-gradient(135deg, #4facfe, #00f2fe)",
+      "date": "2025-11-28",
+      "link": "#"
+    },
+    {
+      "title": "The Tools I Use Every Day",
+      "description": "A look at my go-to apps, gear, and software for design, photo, and video work.",
+      "image": "",
+      "gradient": "linear-gradient(135deg, #43e97b, #38f9d7)",
+      "date": "2025-11-15",
+      "link": "#"
+    }
+  ]
+}
