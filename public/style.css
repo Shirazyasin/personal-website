@@ -520,8 +520,8 @@ h2 {
 }
 
 .project-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -596,9 +596,6 @@ h2 {
   .project-meta {
     gap: 1.25rem;
     flex-wrap: wrap;
-  }
-  .project-gallery {
-    grid-template-columns: 1fr;
   }
 }
 
